@@ -17,7 +17,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       
       - name: Build Image
-        run: docker build -t uzairchini555-gif/devops-task-manager:latest .
+        run: docker build -t uzairchini/devops-task-manager:latest .
 
       - name: Push Image
-        run: docker push uzairchini555-gif/devops-task-manager:latest
+        run: docker push uzairchini/devops-task-manager:latest
