@@ -6,7 +6,7 @@ tasks = [
     ]
 @app.route("/")
 def home():
-    return "DevOps Learning Project"
+    return "DevOps Learning Project v2"
 @app.route("/tasks", methods=["GET"])
 def get_tasks():
     return jsonify(tasks)
