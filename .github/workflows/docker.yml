@@ -22,7 +22,7 @@ jobs:
             -t uzairchini/devops-task-manager:${{ github.sha }} \
             -t uzairchini/devops-task-manager: latest .
       - name: Push SHA Tag 
-        run: docker push uzairchini/devops-task-manager:${{ githu.sha }}
+        run: docker push uzairchini/devops-task-manager:${{ github.sha }}
       
       - name: Push Latest Tag
         run: docker push uzairchini/devops-task-manager:latest 
