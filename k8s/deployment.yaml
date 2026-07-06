@@ -1,19 +1,32 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: Deployment 
 metadata: 
-  name: devops-task-manager
+  name: devops-task-manager 
 spec: 
   replicas: 2
   selector: 
     matchLabels: 
-      app: devops-task-manager
+      app: devops-task-manager 
   template: 
     metadata: 
       labels: 
         app: devops-task-manager
     spec: 
-      containers:
+      containers: 
       - name: task-manager
         image: uzairchini/devops-task-manager:latest
-        ports:
+        ports: 
         - containerPort: 5000
+        readinessProbe: 
+          httpGet: 
+            path: /health
+            port: 5000
+          initialDelaySeconds: 10
+          periodSeconds: 10
+
+        livenessProbe: 
+          httpGet: 
+            path: /health
+            port: 5000
+          initialDelaySeconds: 20
+          periodSeconds: 20
