@@ -14,7 +14,7 @@ spec:
     spec: 
       containers: 
       - name: task-manager
-        image: uzairchini/devops-task-manager:latest
+        image: uzairchini/devops-task-manager:b96748a9a5245abad9b330d27c929892fc01a7fd
         ports: 
         - containerPort: 5000
         readinessProbe: 
