@@ -1,6 +1,6 @@
 ### 🚀 DevOps Task Manager
 A production-style DevOps project demonstrating CI/CD, Kubernetes, and GitOps using GitHub Actions, Docker and Argo CD.
-This project automatically builds a Docker image, pushes it to Docker Hub, updates the kubernetes deployment manifest with an immutable GIT SHA image tag, and deploys the letest version to Kubernetes using Argo CD GitOps.
+This project automatically builds a Docker image, pushes it to Docker Hub, updates the Kubernetes deployment manifest with an immutable GIT SHA image tag, and deploys the latest version to Kubernetes using Argo CD GitOps.
 
 # 📑 Table of Contents
 
@@ -18,8 +18,6 @@ This project automatically builds a Docker image, pushes it to Docker Hub, updat
 * [Lessons Learned](#-lessons-learned)
 * [Future Improvements](#-future-improvements)
 * [Author](#-author)
-* [License](#-license)
-
 
 ## 🛠 Tech Stack 
 Programming Language
@@ -58,9 +56,9 @@ The project follows GitOps principles where Git is the single source of truth.Ev
 1. Build a Docker image 
 2. Tags the image with current Git commit SHA 
 3. Pushes the image to Docker Hub
-4. Updates the kubernetes deployment manifest with the new image tag
+4. Updates the Kubernetes deployment manifest with the new image tag
 5. Commits the updated manifest back to GitHub
-6. Allows Argo CD to detect the Git change and automatically synchronize the kubernetes cluster.
+6. Allows Argo CD to detect the Git change and automatically synchronize the Kubernetes cluster.
 
 This workflow demonstrates immutable deployments, automated rolling updates and production-style continuous delivery.
 
@@ -160,7 +158,7 @@ CI Workflow
     - latest
 5. Both image tags are pushed to Docker Hub 
 6. The kubernetes Deployment manifest is automatically updated with the new Git SHA image 
-7. The updated manifest is commited and pushed back to the GitHub repository.
+7. The updated manifest is committed and pushed back to the GitHub repository.
 
 ## 🔄 GitOps Workflow (Argo CD)
 
@@ -168,7 +166,7 @@ This project follows the **GitOps** model, where **Git is the single source of t
 
 ### Deployment Flow
 
-```text
+```text   
 Developer
      │
 git push
@@ -326,6 +324,24 @@ Some of the challenges encountered while building this project included:
 
 Overcoming these challenges significantly improved my understanding of modern DevOps practices and troubleshooting techniques.
 
+## 📈 Skills Demonstrated
+
+- Git
+- GitHub
+- GitHub Actions
+- Docker
+- Docker Hub
+- Kubernetes
+- Minikube
+- Argo CD
+- GitOps
+- CI/CD
+- Rolling Updates
+- Readiness Probes
+- Liveness Probes
+- YAML
+- Linux
+
 
 ## 🔮 Future Improvements
 
@@ -348,10 +364,3 @@ Possible enhancements for this project include:
 Aspiring DevOps Engineer with hands-on experience in Docker, Kubernetes, GitHub Actions, and GitOps using Argo CD.
 
 GitHub: https://github.com/uzairchini555-gif
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
-Feel free to fork, learn from, and build upon this project for educational purposes.
-
